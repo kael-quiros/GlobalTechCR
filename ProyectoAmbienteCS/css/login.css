@@ -1,0 +1,215 @@
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #243b55;
+}
+
+.login-box form {
+    text-align: center;
+}
+
+.login-box {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 400px;
+padding: 60px;
+transform: translate(-50%, -50%);
+background: rgba(0,0,0, .5);
+box-sizing: border-box;
+box-shadow: 0 15px 25px rgba(0,0,0, .5);
+border-radius: 10px;
+}
+
+.login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.login-box .user-box{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.login-box .user-box input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 0px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #fff; /* Color blanco */
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+    top: -20px; /* Mover el label hacia arriba cuando el input está enfocado o tiene valor */
+    font-size: 12px;
+    color: #fff; /* Color blanco */
+}
+
+.login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: aqua;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    border: 2px solid transparent; /* Agregamos un borde transparente al botón */
+    border-radius: 5px; /* Establecemos el radio de borde para que coincida con el borde del botón */
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4; /* Shadow que será visible durante la animación */
+}
+
+
+.login-box form a:hover {
+    background: #03e9f4;
+    color: #fff;
+}
+
+
+.login-box form a:before {
+    content: ''; /* Agregamos contenido antes del botón */
+    position: absolute; /* Posición absoluta para estar superpuesto al botón */
+    top: -2px; 
+    left: -2px; 
+    right: -2px; 
+    bottom: -2px; 
+    border: 2px solid transparent; 
+    border-radius: 5px; 
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4; 
+    animation: spin 2s linear infinite; 
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#owl-login{
+    width: 116px;
+    height: 92px;
+    background-image: url(https://cdn.readme.io/public/img/login/face.png);
+    position: absolute;
+    top: -85px;
+    left: 50%;
+    margin-left: -64px;
+}
+
+.arm-up-right{
+    width: 51px;
+    height: 41px;
+    background-image: url(https://cdn.readme.io/public/img/login/arm-up-right.png);
+    position: absolute;
+    bottom: 11px;
+    right: 5px;
+    transform: translateX(57px) scale(.8);
+    transform-origin: 0 40px;
+    transition: backgpround-position .3s ease-out, transform .3s ease-out, opacity 0s linear .3s;
+    background-position: 0 25px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.arm-up-left{
+    width: 52px;
+    height: 41px;
+    background-image: url(https://cdn.readme.io/public/img/login/arm-up-left.png);
+    position: absolute;
+    bottom: 11px;
+    left: -3px;
+    transform: translateX(-34px) scale(.8);
+    transform-origin: 0 40px;
+    transition: backgpround-position .3s ease-out, transform .3s ease-out, opacity 0s linear .3s;
+    background-position: 0 25px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.arm-down-left{
+    width: 43px;
+    height: 25px;
+    background-image: url(https://cdn.readme.io/public/img/login/arm-down-left.png);
+    position: absolute;
+    bottom: 2px;
+    left: -34px;
+    transition: .3s ease-out;
+   
+}
+
+.arm-down-right{
+    width: 43px;
+    height: 25px;
+    background-image: url(https://cdn.readme.io/public/img/login/arm-down-right.png);
+    position: absolute;
+    bottom: 1px;
+    right: -40px;
+    transition: .3s ease-out;
+   
+}
+
+.pad {
+    overflow: hidden;
+    padding: 30px;
+}
+
+.controls {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#owl-login.password .arm-down-left {
+    transform: translateX(40px) scale(0) translateY(-10px);
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#owl-login.password .arm-up-left {
+    transform: scale(1);
+    background-position: 0 0;
+    opacity: 1;
+    filter: none;
+    transition: backgroud-position .3s ease-out, transform .3s ease-out;
+}
+
+#owl-login.password .arm-down-right {
+    transform: translateX(-32px) scale(0) translateY(-8px);
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#owl-login.password .arm-up-right {
+    transform: scale(1);
+    background-position: 0 0;
+    opacity: 1;
+    filter: none;
+    transition: backgroud-position .3s ease-out, transform .3s ease-out;
+}
