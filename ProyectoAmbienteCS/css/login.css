@@ -9,6 +9,9 @@ body{
     background: #243b55;
 }
 
+.p{
+    color: #fff;
+}
 .login-box form {
     text-align: center;
 }
@@ -212,4 +215,10 @@ border-radius: 10px;
     opacity: 1;
     filter: none;
     transition: backgroud-position .3s ease-out, transform .3s ease-out;
+}
+
+
+/*para darle color blanco al parrafo*/
+.navbar .user .welcome-text {
+    color: white !important;
 }

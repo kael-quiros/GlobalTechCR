@@ -24,13 +24,13 @@ body {
     
 }
 
-header {
+/*header {
     background-color: rgb(0, 0, 0);
     color: #000000a4;
     height: 55px;
     
     
-}
+}*/
 
 
 nav ul{
@@ -40,6 +40,7 @@ padding-right: 340px;
 .logo img {
     width: 150px;
 }
+
 
 .menu {
     list-style: none;
@@ -62,17 +63,6 @@ padding-right: 340px;
 .menu a:hover {
     color:rgb(12, 70, 57);
 }
-/*
-.carousel {
-    max-width: 1000px; 
-    margin: 0 auto; 
-}
-
-.carousel img {
-    max-width: 100%; 
-    height: auto; 
-}*/
-
 .carousel  {
     display: flex;
     overflow: hidden;
@@ -105,30 +95,18 @@ button {
     font-family: cursive;
 }
 
-.busqueda{
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    background: whitesmoke;
-    border-radius: 8px;
-    padding: 20px 10px;
-    box-shadow: 0 0px rgb(0, 0, 0);
-    transition: .5s ease;
-}
-
-.busqueda:hover{
-    width: 400px;
-}
 
 input{
     width: 100%;
     height: 100%;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 100%;
     border: none;
     outline: none;
     background: transparent;
+}
+/*para darle color blanco al usuario que inicio sesion*/
+.navbar .user .welcome-text {
+    color: white !important;
 }
 
