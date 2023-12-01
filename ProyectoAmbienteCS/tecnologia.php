@@ -65,14 +65,14 @@
     </nav>
   </header>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<<<<<<< HEAD
+
       <div class="image-container"> 
           <img src="img/Tech.jpg"  height="100px">
         </div>
 
-=======
+
   
->>>>>>> 0ead6320d44588dba0699f00f3caa04ba1c9bb4f
+
   <div class="container">
     <div class="row text-center">
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
@@ -87,8 +87,12 @@
             <li class="list-group-item">2340 x 1080 (pantalla plana FHD+)</li>
             <li class="list-group-item">256 GB</li>
           </ul>
-          <div class="card-body">
-            <a href="#" class="btn btn-info">Card link</a>
+          <div class="row">
+            <div class="card-body">
+              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" class="btn btn-danger">Agregar al carrito</a>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -104,8 +108,12 @@
             <li class="list-group-item">2340 x 1080 (pantalla plana FHD+)</li>
             <li class="list-group-item">512 GB</li>
           </ul>
-          <div class="card-body">
-            <a href="#" class="btn btn-info">Card link</a>
+          <div class="row">
+            <div class="card-body">
+              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" class="btn btn-danger">Agregar al carrito</a>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -121,27 +129,25 @@
             <li class="list-group-item">3088 x 1440 (Edge Quad HD+)</li>
             <li class="list-group-item">1 TB</li>
           </ul>
-          <div class="card-body">
-            <a href="#" class="btn btn-info">Card link</a>
+          <div class="row">
+            <div class="card-body">
+              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" class="btn btn-danger">Agregar al carrito</a>
+            </div>
+            
           </div>
         </div>
       </div>
     </div>
   </div>
 
-<<<<<<< HEAD
+
   <div class="text-black mt-5 p-2" style="background-color:#27b0a2;" >
       <footer class="footer">
         <p>Sitio construido Global Tech CR &COPY - 2023</p>
       </footer>
     </div>
-=======
 
-
-
-
-
->>>>>>> 0ead6320d44588dba0699f00f3caa04ba1c9bb4f
 
  
 </body>

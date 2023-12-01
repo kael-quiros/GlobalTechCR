@@ -67,9 +67,9 @@
   </header>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-      <div class="image-container"> 
-          <img src="img/AYV.jpg"  height="100px">
-        </div>
+  <div class="image-container">
+    <img src="img/AYV.jpg" height="100px">
+  </div>
 
   <div class="container">
     <div class="row text-center ">
@@ -78,15 +78,19 @@
           <img src="img/barraSonidoSony.jpg" class="card-img-top rounded-lg" alt="100px">
           <div class="card-body">
             <h5 class="card-title">Barra de sonido Sony</h5>
-            <p class="card-text">Incluye barra de sonido de 100 watts y subwoofer de la misma potencia  </p>
+            <p class="card-text">Incluye barra de sonido de 100 watts y subwoofer de la misma potencia </p>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Color Negro</li>
             <li class="list-group-item">Dolby 5.0</li>
             <li class="list-group-item">110v/ac</li>
           </ul>
-          <div class="card-body">
-            <a href="#" class="btn btn-info">Card link</a>
+          <div class="row">
+            <div class="card-body">
+              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" class="btn btn-danger">Agregar al carrito</a>
+            </div>
+
           </div>
         </div>
       </div>
@@ -102,8 +106,12 @@
             <li class="list-group-item">QLED</li>
             <li class="list-group-item">4K</li>
           </ul>
-          <div class="card-body">
-            <a href="#" class="btn btn-info">Card link</a>
+          <div class="row">
+            <div class="card-body">
+              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" class="btn btn-danger">Agregar al carrito</a>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -119,8 +127,12 @@
             <li class="list-group-item">150W Bluetooth</li>
             <li class="list-group-item">Color Negro</li>
           </ul>
-          <div class="card-body">
-            <a href="#" class="btn btn-info">Card link</a>
+          <div class="row">
+            <div class="card-body">
+              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" class="btn btn-danger">Agregar al carrito</a>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -128,16 +140,14 @@
   </div>
 
 
-<<<<<<< HEAD
-      <div class="text-black mt-5 p-2" style="background-color:#27b0a2;" >
-      <footer class="footer">
-        <p>Sitio construido Global Tech CR &COPY - 2023</p>
-      </footer>
-    </div>
+  <div class="text-black mt-5 p-2" style="background-color:#27b0a2;">
+    <footer class="footer">
+      <p>Sitio construido Global Tech CR &COPY - 2023</p>
+    </footer>
+  </div>
 
-      
-=======
->>>>>>> 0ead6320d44588dba0699f00f3caa04ba1c9bb4f
+
+
 </body>
 
 </html>

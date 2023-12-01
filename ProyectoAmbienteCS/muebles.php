@@ -68,9 +68,9 @@
   </header>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-      <div class="image-container"> 
-          <img src="img/Muebles.jpg"  height="100px">
-        </div>
+  <div class="image-container">
+    <img src="img/Muebles.jpg" height="100px">
+  </div>
 
   <div class="container">
     <div class="row text-center ">
@@ -79,15 +79,19 @@
           <img src="img/centroDeEntretenimiento.jpg" class="card-img-top rounded-lg" alt="100px">
           <div class="card-body">
             <h5 class="card-title">Centro de entretenimiento</h5>
-            <p class="card-text">El complemento perfecto para su pantalla   </p>
+            <p class="card-text">El complemento perfecto para su pantalla </p>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Color Café Caoba</li>
             <li class="list-group-item">Comodity</li>
             <li class="list-group-item">8 Estantes + soporte de para pantalla</li>
           </ul>
-          <div class="card-body">
-            <a href="#" class="btn btn-info">Card link</a>
+          <div class="row">
+            <div class="card-body">
+              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" class="btn btn-danger">Agregar al carrito</a>
+            </div>
+
           </div>
         </div>
       </div>
@@ -96,15 +100,19 @@
           <img src="img/sillonNegro.jpg" class="card-img-top" alt="100px">
           <div class="card-body">
             <h5 class="card-title">Sillon Plegable Individual"</h5>
-            <p class="card-text">Dese el descanso que merece con nuestro sillon plegable  </p>
+            <p class="card-text">Dese el descanso que merece con nuestro sillon plegable </p>
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Color negro </li>
             <li class="list-group-item">Zena KM088</li>
             <li class="list-group-item">Individual plegable con descans pies</li>
           </ul>
-          <div class="card-body">
-            <a href="#" class="btn btn-info">Card link</a>
+          <div class="row">
+            <div class="card-body">
+              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" class="btn btn-danger">Agregar al carrito</a>
+            </div>
+
           </div>
         </div>
       </div>
@@ -120,22 +128,25 @@
             <li class="list-group-item">Comodity TONDELA</li>
             <li class="list-group-item">No incluye adornos</li>
           </ul>
-          <div class="card-body">
-            <a href="#" class="btn btn-info">Card link</a>
+          <div class="row">
+            <div class="card-body">
+              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" class="btn btn-danger">Agregar al carrito</a>
+            </div>
+
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-      <div class="text-black mt-5 p-2" style="background-color:#27b0a2;" >
-      <footer class="footer">
-        <p>Sitio construido Global Tech CR &COPY - 2023</p>
-      </footer>
-    </div>
-=======
+      <div class="text-black mt-5 p-2" style="background-color:#27b0a2;">
+        <footer class="footer">
+          <p>Sitio construido Global Tech CR &COPY - 2023</p>
+        </footer>
+      </div>
+
     </div>
   </div>
 
->>>>>>> 0ead6320d44588dba0699f00f3caa04ba1c9bb4f
+
 
 </body>
 
