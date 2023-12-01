@@ -37,24 +37,24 @@ session_start();
               
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
-                <a class="dropdown-item" href="audioYVideo.html"
+                <a class="dropdown-item" href="audioYVideo.php"
                   >Audio y Video</a
                 >
               </li>
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="hogar.html">Hogar</a></li>
+              <li><a class="dropdown-item" href="hogar.php">Hogar</a></li>
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="muebles.html">Muebles</a></li>
+              <li><a class="dropdown-item" href="muebles.php">Muebles</a></li>
               <li><hr class="dropdown-divider" /></li>
               <li>
-                <a class="dropdown-item" href="tecnologia.html">Tecnologia</a>
+                <a class="dropdown-item" href="tecnologia.php">Tecnologia</a>
               </li>
               <li><hr class="dropdown-divider" /></li>
               <li><a class="dropdown-item" href="#">Por añadir</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contactenos.html">Contactenos</a>
+            <a class="nav-link" href="contactenos.php">Contactenos</a>
           </li>
         </ul>
     

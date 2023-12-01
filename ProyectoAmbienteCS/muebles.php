@@ -8,40 +8,64 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header> 
+<header> 
         <div id="logo">
          <img src="/img/logo.png" alt="Logo">
        </div>
-         <nav>  
-             <ul class="menu">
-                 <ul class="nav nav-pills">
-         <li class="nav-item">
-           <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-         </li>
-         <li class="nav-item dropdown">
-           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Categorias</a>
-           <ul class="dropdown-menu">
-             <li><a class="dropdown-item" href="audioYVideo.html">Audio y Video</a></li>
-             <li><hr class="dropdown-divider"></li>
-             <li><a class="dropdown-item" href="hogar.html">Hogar</a></li>
-             <li><hr class="dropdown-divider"></li>
-             <li><a class="dropdown-item" href="muebles.html">Muebles</a></li>
-             <li><hr class="dropdown-divider"></li>
-             <li><a class="dropdown-item" href="tecnologia.html">Tecnologia</a></li>
-             <li><hr class="dropdown-divider"></li>
-             <li><a class="dropdown-item" href="#">Por añadir</a></li>
-           </ul>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link" href="contacteneos.html">Contactenos</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-         </li>
-       </ul> 
-             </ul>
-         </nav>
-      </header> 
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Categorias</a>
+              
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="audioYVideo.php"
+                  >Audio y Video</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="hogar.php">Hogar</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              
+              <li>
+                <a class="dropdown-item" href="tecnologia.php">Tecnologia</a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Por añadir</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactenos.php">Contactenos</a>
+          </li>
+        </ul>
+    
+        <div class="user">
+    <?php
+    if (isset($_SESSION['nombreUsuario'])) {
+        echo '<p style="color: white !important;" class="welcome-text">Bienvenido, ' . $_SESSION['nombreUsuario'] . '</p>';
+        echo '<a href="logout.php" class="logout-link">Cerrar sesión</a>';
+    } else {
+        echo '<a href="login.php" class="login-link">Iniciar sesión</a>';
+    }
+    ?>
+      </div>
+
+    
+    </div>
+
+    </nav>
+      </header>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 
