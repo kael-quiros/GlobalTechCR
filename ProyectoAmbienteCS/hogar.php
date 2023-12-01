@@ -70,18 +70,18 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
   <div class="container">
-    <div class="row text-center">
+    <div class="row text-center ">
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
         <div class="card shadow" style="width: 18rem;">
-          <img src="" class="card-img-top" alt="100px">
+          <img src="img/refrigeradora2Puertas.jpg" class="card-img-top rounded-lg" alt="100px">
           <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
+            <h5 class="card-title">Refrigeradora 2 puertas Mabe</h5>
+            <p class="card-text">Hermosa refrigeradora de 2 puertas con dispensador de agua helada   </p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
+            <li class="list-group-item">Color Metalico</li>
+            <li class="list-group-item">Mabe</li>
+            <li class="list-group-item">3 niveles internos con capacidad de almacewnar botellas de galón</li>
           </ul>
           <div class="card-body">
             <a href="#" class="btn btn-info">Card link</a>
@@ -90,15 +90,15 @@
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
         <div class="card shadow" style="width: 18rem;">
-          <img src="" class="card-img-top" alt="100px">
+          <img src="img/cocinaGas.jpg" class="card-img-top" alt="100px">
           <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
+            <h5 class="card-title">Cocina de gas"</h5>
+            <p class="card-text">Ahorre en el consumo de energia con esta excelente y segura opción    </p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
+            <li class="list-group-item">Color negro con gris </li>
+            <li class="list-group-item">Mabe RMB300IZMRXO</li>
+            <li class="list-group-item">4 discos y plancha central+horno</li>
           </ul>
           <div class="card-body">
             <a href="#" class="btn btn-info">Card link</a>
@@ -107,15 +107,15 @@
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
         <div class="card shadow" style="width: 18rem;">
-          <img src="" class="card-img-top" alt="100px">
+          <img src="img/aireAcondicionadoPortatil.jpg" class="card-img-top" alt="100px">
           <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
+            <h5 class="card-title">Aire acondicionado portátil</h5>
+            <p class="card-text">Con tecnología para ahorro en el consumo de WATTS</p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
+            <li class="list-group-item">Color bLANCO </li>
+            <li class="list-group-item">Vórtice 65065 12000 btu</li>
+            <li class="list-group-item">No necesita intalaciones adicionales-110v</li>
           </ul>
           <div class="card-body">
             <a href="#" class="btn btn-info">Card link</a>
@@ -124,7 +124,6 @@
       </div>
     </div>
   </div>
-
 
 </body>
 

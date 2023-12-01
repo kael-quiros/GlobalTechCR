@@ -69,18 +69,18 @@
 
 
   <div class="container">
-    <div class="row text-center">
+    <div class="row text-center ">
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
         <div class="card shadow" style="width: 18rem;">
-          <img src="" class="card-img-top" alt="100px">
+          <img src="img/barraSonidoSony.jpg" class="card-img-top rounded-lg" alt="100px">
           <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
+            <h5 class="card-title">Barra de sonido Sony</h5>
+            <p class="card-text">Incluye barra de sonido de 100 watts y subwoofer de la misma potencia  </p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
+            <li class="list-group-item">Color Negro</li>
+            <li class="list-group-item">Dolby 5.0</li>
+            <li class="list-group-item">110v/ac</li>
           </ul>
           <div class="card-body">
             <a href="#" class="btn btn-info">Card link</a>
@@ -89,15 +89,15 @@
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
         <div class="card shadow" style="width: 18rem;">
-          <img src="" class="card-img-top" alt="100px">
+          <img src="img/pantallaSamsung65.jpg" class="card-img-top" alt="100px">
           <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
+            <h5 class="card-title">Pantalla Samsung 65"</h5>
+            <p class="card-text">Pantalla QLED Full 4K, disfrute de los mejores colores en una resolucion de 4k </p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
+            <li class="list-group-item">Borde Ultra Slim </li>
+            <li class="list-group-item">QLED</li>
+            <li class="list-group-item">4K</li>
           </ul>
           <div class="card-body">
             <a href="#" class="btn btn-info">Card link</a>
@@ -106,15 +106,15 @@
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
         <div class="card shadow" style="width: 18rem;">
-          <img src="" class="card-img-top" alt="100px">
+          <img src="img/parlanteSony.jpg" class="card-img-top" alt="100px">
           <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
+            <h5 class="card-title">Parlante Inalámbrico Sony</h5>
+            <p class="card-text">Parlante inalámbrico de alta fidelidad</p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
+            <li class="list-group-item">Modelo SRS-XV800 </li>
+            <li class="list-group-item">150W Bluetooth</li>
+            <li class="list-group-item">Color Negro</li>
           </ul>
           <div class="card-body">
             <a href="#" class="btn btn-info">Card link</a>

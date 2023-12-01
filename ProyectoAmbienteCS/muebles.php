@@ -70,18 +70,18 @@
 
 
   <div class="container">
-    <div class="row text-center">
+    <div class="row text-center ">
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
         <div class="card shadow" style="width: 18rem;">
-          <img src="" class="card-img-top" alt="100px">
+          <img src="img/centroDeEntretenimiento.jpg" class="card-img-top rounded-lg" alt="100px">
           <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
+            <h5 class="card-title">Centro de entretenimiento</h5>
+            <p class="card-text">El complemento perfecto para su pantalla   </p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
+            <li class="list-group-item">Color Café Caoba</li>
+            <li class="list-group-item">Comodity</li>
+            <li class="list-group-item">8 Estantes + soporte de para pantalla</li>
           </ul>
           <div class="card-body">
             <a href="#" class="btn btn-info">Card link</a>
@@ -90,15 +90,15 @@
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
         <div class="card shadow" style="width: 18rem;">
-          <img src="" class="card-img-top" alt="100px">
+          <img src="img/sillonNegro.jpg" class="card-img-top" alt="100px">
           <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
+            <h5 class="card-title">Sillon Plegable Individual"</h5>
+            <p class="card-text">Dese el descanso que merece con nuestro sillon plegable  </p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
+            <li class="list-group-item">Color negro </li>
+            <li class="list-group-item">Zena KM088</li>
+            <li class="list-group-item">Individual plegable con descans pies</li>
           </ul>
           <div class="card-body">
             <a href="#" class="btn btn-info">Card link</a>
@@ -107,15 +107,15 @@
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
         <div class="card shadow" style="width: 18rem;">
-          <img src="" class="card-img-top" alt="100px">
+          <img src="img/juegoComedor.jpg" class="card-img-top" alt="100px">
           <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
+            <h5 class="card-title">Juego de comedor</h5>
+            <p class="card-text">Rectangular con 6 sillas y centro de vidrio</p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
+            <li class="list-group-item">Color café caoba </li>
+            <li class="list-group-item">Comodity TONDELA</li>
+            <li class="list-group-item">No incluye adornos</li>
           </ul>
           <div class="card-body">
             <a href="#" class="btn btn-info">Card link</a>
