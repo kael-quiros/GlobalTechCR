@@ -66,20 +66,60 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 
+  <div class="container">
 
-  <div class="card" style="width: 18rem;">
-    <img src="/img/Samsung S23.jpeg" class="card-img-top" alt="100px">
-    <div class="card-body">
-      <h5 class="card-title">Celular Samsung S23</h5>
-      <p class="card-text">Medido en diagonal, el tamaño de la pantalla del Galaxy S23 es 6.1" en el rectángulo completo y 5.9" teniendo en cuenta las esquinas redondeadas</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">6.1"*</li>
-      <li class="list-group-item">2340 x 1080 (pantalla plana FHD+)</li>
-      <li class="list-group-item">256 GB</li>
-    </ul>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
+    <div class="row text-center">
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <div class="card shadow" style="width: 18rem;">
+          <img src="/img/Samsung S23.jpeg" class="card-img-top" alt="100px">
+          <div class="card-body">
+            <h5 class="card-title">Celular Samsung S23</h5>
+            <p class="card-text">Medido en diagonal, el tamaño de la pantalla del Galaxy S23 es 6.1" en el rectángulo completo y 5.9" teniendo en cuenta las esquinas redondeadas</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">6.1"*</li>
+            <li class="list-group-item">2340 x 1080 (pantalla plana FHD+)</li>
+            <li class="list-group-item">256 GB</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="btn btn-info">Card link</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <div class="card shadow" style="width: 18rem;">
+          <img src="/img/Samsung S23.jpeg" class="card-img-top" alt="100px">
+          <div class="card-body">
+            <h5 class="card-title">Celular Samsung S23</h5>
+            <p class="card-text">Medido en diagonal, el tamaño de la pantalla del Galaxy S23 es 6.1" en el rectángulo completo y 5.9" teniendo en cuenta las esquinas redondeadas</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">6.1"*</li>
+            <li class="list-group-item">2340 x 1080 (pantalla plana FHD+)</li>
+            <li class="list-group-item">256 GB</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="btn btn-info">Card link</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <div class="card shadow" style="width: 18rem;">
+          <img src="/img/Samsung S23.jpeg" class="card-img-top" alt="100px">
+          <div class="card-body">
+            <h5 class="card-title">Celular Samsung S23</h5>
+            <p class="card-text">Medido en diagonal, el tamaño de la pantalla del Galaxy S23 es 6.1" en el rectángulo completo y 5.9" teniendo en cuenta las esquinas redondeadas</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">6.1"*</li>
+            <li class="list-group-item">2340 x 1080 (pantalla plana FHD+)</li>
+            <li class="list-group-item">256 GB</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="btn btn-info">Card link</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -87,41 +127,7 @@
 
 
 
-
-  <div class="card" class="col-md-4" style="width: 18rem;">
-    <img src="/img/samsung s23+.jpg" class="card-img-top" alt="100px">
-    <div class="card-body">
-      <h5 class="card-title">Celular Samsung S23+</h5>
-      <p class="card-text"> el tamaño de la pantalla del Galaxy S23+ es 6.6" en el rectángulo completo y 6.4" con cuentas para las esquinas redondeadas</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">6.6"*</li>
-      <li class="list-group-item">2340 x 1080 (pantalla plana FHD+)</li>
-      <li class="list-group-item">512 GB</li>
-    </ul>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-    </div>
-  </div>
-
-
-
-
-  <div class="card" class="col-md-4" style="width: 18rem;">
-    <img src="/img/Samsung S23U.jpg" class="card-img-top" alt="100px">
-    <div class="card-body">
-      <h5 class="card-title">Celular Samsung S23 Ultra</h5>
-      <p class="card-text">Medido en diagonal, el tamaño de la pantalla del Galaxy S23 es 6.1" en el rectángulo completo y 5.9" teniendo en cuenta las esquinas redondeadas</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">6.8"*</li>
-      <li class="list-group-item">3088 x 1440 (Edge Quad HD+)</li>
-      <li class="list-group-item">1TB</li>
-    </ul>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-    </div>
-  </div>
+  
 
 
 </body>
