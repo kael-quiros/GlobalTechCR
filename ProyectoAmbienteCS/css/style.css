@@ -18,10 +18,14 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     /*background-color: rgb(13, 27, 51);*/
-    background-image: url(/img/fondoweb.jpg) ;
+    /*background-image: url(/img/fondoweb.jpg) ; */
     margin: 0;
     padding: 0;
-    
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 }
 
 /*header {
@@ -38,7 +42,7 @@ padding-right: 340px;
 }
 
 .logo img {
-    width: 150px;
+    width: 50px;
 }
 
 
@@ -109,4 +113,13 @@ input{
 .navbar .user .welcome-text {
     color: white !important;
 }
+
+.card:hover{
+    opacity: 0.8;
+}
+
+.card:text{
+    text-align: justify;
+}
+
 
