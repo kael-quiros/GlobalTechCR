@@ -56,19 +56,12 @@ if ($conn->connect_error) {
     </header>  
     
 
-    <div>
-    <?php
-// Verificar si se pasó el parámetro "registered" en la URL
-if (isset($_GET['registered']) && $_GET['registered'] == 1) {
-    echo '<div id="error-message" style="color: red;">Usuario ya registrado. Por favor, inicia sesión.</div>';
-}
-?>
-</div>
+
 
 <div class="login-box">
     <h2>Login</h2>
     <form id="loginForm" method="POST" action="process_login.php">
-    <div id="owl-login">
+        <div id="owl-login">
             <div class="eyes"></div>
             <div class="arm-up-right"></div>
             <div class="arm-up-left"></div>
@@ -86,11 +79,9 @@ if (isset($_GET['registered']) && $_GET['registered'] == 1) {
         <button type="submit" name="action" value="login">Login</button>
         <div id="error-message" style="display: none; color: red;"></div> 
     </form>
-    <p style="color: white !important;" class="welcome-text"> <a href="register.php">¿Olvido su contraseña?</a></p>
-    <p style="color: white !important;" class="welcome-text"> ¿No tienes una cuenta? <a href="register.php">Regístrate aquí</a></p>
+    <p style="color: white !important;" class="welcome-text"><a href="RecuperaCuenta.php">¿Olvidó su contraseña?</a></p>
+    <p style="color: white !important;" class="welcome-text">¿No tienes una cuenta? <a href="register.php">Regístrate aquí</a></p>
 </div>
-
-
 
 
 <script src="js/script.js"></script>

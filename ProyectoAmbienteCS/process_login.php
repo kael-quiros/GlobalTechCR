@@ -5,30 +5,28 @@ include('connection.php');
 // Inicia o reanuda la sesión
 session_start();
 
-// Verificar el POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // para obtener los datos del formulario
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    // Consulta SQL para verificar el usuario
-    $query = "SELECT * FROM usuarios WHERE email = '$email' AND password = '$password'";
-    $result = mysqli_query($connection, $query);
+    // Consulta SQL para verificar el usuario (usando consultas preparadas para seguridad)
+    $query = "SELECT * FROM usuarios WHERE email = ? AND password = ?";
+    $stmt = mysqli_prepare($connection, $query);
+    mysqli_stmt_bind_param($stmt, "ss", $email, $password);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
 
     // Verifica si se encontró un resultado
     if ($result && mysqli_num_rows($result) == 1) {
-        // Obteniene los datos del usuario
+        // Usuario autenticado correctamente
         $row = mysqli_fetch_assoc($result);
-
-        // Establece la variable para el nombre de usuario
-        $_SESSION['nombreUsuario'] = $row['nombre'];
-
-        // Redirige al usuario al index después de iniciar sesión
-        header("Location: index.php");
-        exit();
+    
+        session_start();
+        $_SESSION['nombreUsuario'] = $row['nombre']; // Asegúrate de almacenar el nombre del usuario en la sesión
+    
+        echo "success"; // Envía una respuesta de éxito al cliente
     } else {
-        // Mostrar un mensaje si las credenciales son inválidas
-        echo "Credenciales inválidas. Intente nuevamente.";
+        http_response_code(401); // Indica un error de no autorizado 
     }
 }
 ?>

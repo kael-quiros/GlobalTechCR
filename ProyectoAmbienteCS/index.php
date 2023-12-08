@@ -16,6 +16,7 @@ session_start();
 </head>
 
 <body>
+  <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <div class="logo">
@@ -49,7 +50,7 @@ session_start();
             <li>
               <hr class="dropdown-divider" />
             </li>
-            <li><a class="dropdown-item" href="#">Por añadir</a></li>
+           
           </ul>
         </li>
         <li class="nav-item">
@@ -68,11 +69,10 @@ session_start();
         ?>
       </div>
 
-
-    </div>
-
   </nav>
 
+      </header>
+      
   <div class="container-fluid">
 
     <div id="carouselExampleIndicators" class="carousel slide ">

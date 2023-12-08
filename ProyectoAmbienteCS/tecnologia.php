@@ -89,7 +89,6 @@
           </ul>
           <div class="row">
             <div class="card-body">
-              <a href="#" class="btn btn-primary">Comprar</a>
               <a href="#" class="btn btn-danger">Agregar al carrito</a>
             </div>
             
@@ -110,7 +109,6 @@
           </ul>
           <div class="row">
             <div class="card-body">
-              <a href="#" class="btn btn-primary">Comprar</a>
               <a href="#" class="btn btn-danger">Agregar al carrito</a>
             </div>
             
@@ -131,7 +129,6 @@
           </ul>
           <div class="row">
             <div class="card-body">
-              <a href="#" class="btn btn-primary">Comprar</a>
               <a href="#" class="btn btn-danger">Agregar al carrito</a>
             </div>
             

@@ -25,7 +25,7 @@ if ($conn->connect_error) {
 <body>
 <header>
     <div id="logo">
-        <img src="/img/logo.png" alt="Logo">
+        <img src="img/logo.png" alt="Logo">
       </div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">  
         <div class="container-fluid">
@@ -57,10 +57,14 @@ if ($conn->connect_error) {
     
     <div class="login-box">
     <h2>Registro</h2>
-    <form method="POST" action="process_register.php">
-        <div id="owl-login">
-  
-        </div>
+    <?php
+    if (isset($_SESSION['registration_message'])) {
+        echo '<p style="color: red;">' . $_SESSION['registration_message'] . '</p>';
+        unset($_SESSION['registration_message']);
+    }
+    ?>
+    <form id="registerForm" method="POST" action="process_register.php">
+        <div id="owl-login"></div>
         <div class="user-box">
             <input type="text" name="nombre" required>
             <label>Nombre</label>
@@ -75,11 +79,14 @@ if ($conn->connect_error) {
         </div>
         <button type="submit" name="action" value="register">Register</button>
     </form>
+    <p style="color: white !important;" class="welcome-text">Ya tienes una cuenta? <a href="login.php">Inicia sesión aquí</a></p>
+
+    
 </div>
 
 
 
-<script src="/js/script.js"></script>
+<script src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
   </body>
