@@ -1,8 +1,8 @@
 <?php
-//conexión a la base de datos
+// Incluir el archivo de conexión a la base de datos
 include('connection.php');
 
-// Inicia o reanuda la sesión
+// Iniciar o reanudar la sesión
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -16,20 +16,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
 
-    // Verifica si se encontró un resultado
+    // Verificar si se encontró un resultado
     if ($result && mysqli_num_rows($result) == 1) {
         // Usuario autenticado correctamente
         $row = mysqli_fetch_assoc($result);
-    
-        session_start();
-        $_SESSION['nombreUsuario'] = $row['nombre']; // Asegúrate de almacenar el nombre del usuario en la sesión
-    
-        echo "success"; // Envía una respuesta de éxito al cliente
+
+        // Establecer la sesión con el nombre del usuario
+        $_SESSION['nombreUsuario'] = $row['nombre'];
+
+        // Verificar el rol del usuario y establecerlo en la sesión
+        if ($row['rol'] === 'admin') {
+            $_SESSION['rol'] = 'admin'; // Usuario con rol de administrador
+            header("Location: index.php"); // Redirigir a la página de administrador
+        } else {
+            $_SESSION['rol'] = 'user'; // Usuario con rol de usuario estándar
+            header("Location: index.php"); // Redirigir a la página de usuario estándar
+        }
+        exit(); // Terminar el script después de la redirección
     } else {
-        http_response_code(401); // Indica un error de no autorizado 
+        http_response_code(401); // Error de no autorizado
     }
 }
 ?>
+
+
 
 
 

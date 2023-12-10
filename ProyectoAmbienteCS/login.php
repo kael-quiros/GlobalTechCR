@@ -86,7 +86,7 @@ if (isset($_GET['registered']) && $_GET['registered'] == 1) {
         <button type="submit" name="action" value="login">Login</button>
         <div id="error-message" style="display: none; color: red;"></div> 
     </form>
-    <p style="color: white !important;" class="welcome-text"> <a href="register.php">¿Olvido su contraseña?</a></p>
+    <p style="color: white !important;" class="welcome-text"> <a href="recuperaCuenta.php">¿Olvido su contraseña?</a></p>
     <p style="color: white !important;" class="welcome-text"> ¿No tienes una cuenta? <a href="register.php">Regístrate aquí</a></p>
 </div>
 

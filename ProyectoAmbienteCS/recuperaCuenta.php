@@ -55,33 +55,18 @@ if ($conn->connect_error) {
       </nav>
     </header>  
     
-
-
-
-<div class="login-box">
-    <h2>Login</h2>
-    <form id="loginForm" method="POST" action="process_login.php">
-        <div id="owl-login">
-            <div class="eyes"></div>
-            <div class="arm-up-right"></div>
-            <div class="arm-up-left"></div>
-            <div class="arm-down-left"></div>
-            <div class="arm-down-right"></div>
-        </div>
+    <div class="login-box">
+    <h2>Recuperación de Cuenta</h2>
+    <form id="recoveryForm" method="POST" action="process_recovery.php">
         <div class="user-box">
             <input type="text" name="email" required>
-            <label>Email</label>
+            <label>Email registrado</label>
         </div>
-        <div class="user-box">
-            <input id="password" type="password" name="password" required autocomplete="off">
-            <label>Password</label>
-        </div>
-        <button type="submit" name="action" value="login">Login</button>
-        <div id="error-message" style="display: none; color: red;"></div> 
+        <button type="submit" name="action" value="recover">Recuperar Cuenta</button>
+        <div id="recovery-error-message" style="display: none; color: red;"></div>
     </form>
-    <p style="color: white !important;" class="welcome-text"><a href="RecuperaCuenta.php">¿Olvidó su contraseña?</a></p>
-    <p style="color: white !important;" class="welcome-text">¿No tienes una cuenta? <a href="register.php">Regístrate aquí</a></p>
 </div>
+
 
 
 <script src="js/script.js"></script>
