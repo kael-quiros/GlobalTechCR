@@ -130,17 +130,22 @@ input{
 }
 
 .card:hover{
-    opacity: 0.8;
+    opacity: 0.4;
 }
 
 .card:text{
-    text-align: justify;
+    text-align: center;
 }
 
-.card-img-top{
-    display: block;
-    margin: auto;
+.card img {
     max-width: 100%;
     height: auto;
-    padding: 20px;   
+    background: lightblue;
+    background: radial-gradient(white 30%,lightblue 70%);  
+}
+
+.fa-star,
+.fa-star-half{
+    color: yellowgreen;
+    padding: 3% 0%;
 }

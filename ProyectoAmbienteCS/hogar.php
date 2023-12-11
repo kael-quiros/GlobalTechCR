@@ -14,6 +14,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -58,6 +59,7 @@ session_start();
             <a class="nav-link" href="contactenos.php">Contactenos</a>
           </li>
         </ul>
+        <a href="shoppingCart.php" class="navbar-brand"><h3 class="px-5"><i class="fas fa-shopping-basket"></i>Shopping Cart</h3></a>
 
         <div class="user">
           <?php
@@ -84,68 +86,170 @@ session_start();
 
 
   <div class="container">
-    <div class="row text-center ">
-      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
-        <div class="card shadow" style="width: 18rem;">
-          <img src="img/refrigeradora2Puertas.jpg" class="card-img-top rounded-lg" alt="100px">
-          <div class="card-body">
-            <h5 class="card-title">Refrigeradora 2 puertas Mabe</h5>
-            <p class="card-text">Hermosa refrigeradora de 2 puertas con dispensador de agua helada </p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Color Metalico</li>
-            <li class="list-group-item">Mabe</li>
-            <li class="list-group-item">3 niveles internos con capacidad de almacewnar botellas de galón</li>
-          </ul>
-          <div class="row">
-            <div class="card-body">
-              <a href="#" class="btn btn-danger">Agregar al carrito</a>
+    <div class="row text-center py-5">
+      <div class="col-sm-12 col-md-4 col-lg-4 my-3 my-md-0">
+        <form action="audioYVideo.php" method="post">
+          <div class="card shadow">
+            <div>
+              <img src="img/barraSonidoSony.jpg" alt="Image1" class="img-fluid card-img-top">
             </div>
-
-          </div>
-
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
-        <div class="card shadow" style="width: 18rem;">
-          <img src="img/cocinaGas.jpg" class="card-img-top" alt="100px">
-          <div class="card-body">
-            <h5 class="card-title">Cocina de gas"</h5>
-            <p class="card-text">Ahorre en el consumo de energia con esta excelente y segura opción </p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Color negro con gris </li>
-            <li class="list-group-item">Mabe RMB300IZMRXO</li>
-            <li class="list-group-item">4 discos y plancha central+horno</li>
-          </ul>
-          <div class="row">
             <div class="card-body">
-              <a href="#" class="btn btn-danger">Agregar al carrito</a>
+              <h5 class="card-title">Producto1</h5>
+              <h6>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </h6>
+              <p class="card-text">
+                Breve descripcion del producto
+              </p>
+              <h5>
+                <small><s class="text-secondary">$599</s></small>
+                <span class="precio">$519</span>
+              </h5>
+              <button type="submit" class="btn btn-warning my-3" name="btn-agregar">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
             </div>
-
           </div>
-        </div>
+        </form>
       </div>
-      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
-        <div class="card shadow" style="width: 18rem;">
-          <img src="img/aireAcondicionadoPortatil.jpg" class="card-img-top" alt="100px">
-          <div class="card-body">
-            <h5 class="card-title">Aire acondicionado portátil</h5>
-            <p class="card-text">Con tecnología para ahorro en el consumo de WATTS</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Color bLANCO </li>
-            <li class="list-group-item">Vórtice 65065 12000 btu</li>
-            <li class="list-group-item">No necesita intalaciones adicionales-110v</li>
-          </ul>
-          <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-4 my-3 my-md-0">
+        <form action="audioYVideo.php" method="post">
+          <div class="card shadow">
+            <div>
+              <img src="img/barraSonidoSony.jpg" alt="Image1" class="img-fluid card-img-top">
+            </div>
             <div class="card-body">
-              <a href="#" class="btn btn-danger">Agregar al carrito</a>
+              <h5 class="card-title">Producto2</h5>
+              <h6>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </h6>
+              <p class="card-text">
+                Breve descripcion del producto
+              </p>
+              <h5>
+                <small><s class="text-secondary">$599</s></small>
+                <span class="precio">$519</span>
+              </h5>
+              <button type="submit" class="btn btn-warning my-3" name="btn-agregar">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
             </div>
-
           </div>
-        </div>
+        </form>
       </div>
+      <div class="col-sm-12 col-md-4 col-lg-4 my-3 my-md-0">
+        <form action="audioYVideo.php" method="post">
+          <div class="card shadow">
+            <div>
+              <img src="img/barraSonidoSony.jpg" alt="Image1" class="img-fluid card-img-top">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Producto3</h5>
+              <h6>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </h6>
+              <p class="card-text">
+                Breve descripcion del producto
+              </p>
+              <h5>
+                <small><s class="text-secondary">$599</s></small>
+                <span class="precio">$519</span>
+              </h5>
+              <button type="submit" class="btn btn-warning my-3" name="btn-agregar">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4 my-3 my-md-0">
+        <form action="audioYVideo.php" method="post">
+          <div class="card shadow">
+            <div>
+              <img src="img/barraSonidoSony.jpg" alt="Image1" class="img-fluid card-img-top">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Producto4</h5>
+              <h6>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </h6>
+              <p class="card-text">
+                Breve descripcion del producto
+              </p>
+              <h5>
+                <small><s class="text-secondary">$599</s></small>
+                <span class="precio">$519</span>
+              </h5>
+              <button type="submit" class="btn btn-warning my-3" name="btn-agregar">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4 my-3 my-md-0">
+        <form action="audioYVideo.php" method="post">
+          <div class="card shadow">
+            <div>
+              <img src="img/barraSonidoSony.jpg" alt="Image1" class="img-fluid card-img-top">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Producto5</h5>
+              <h6>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </h6>
+              <p class="card-text">
+                Breve descripcion del producto
+              </p>
+              <h5>
+                <small><s class="text-secondary">$599</s></small>
+                <span class="precio">$519</span>
+              </h5>
+              <button type="submit" class="btn btn-warning my-3" name="btn-agregar">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4 my-3 my-md-0">
+        <form action="audioYVideo.php" method="post">
+          <div class="card shadow">
+            <div>
+              <img src="img/barraSonidoSony.jpg" alt="Image1" class="img-fluid card-img-top">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Producto6</h5>
+              <h6>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </h6>
+              <p class="card-text">
+                Breve descripcion del producto
+              </p>
+              <h5>
+                <small><s class="text-secondary">$599</s></small>
+                <span class="precio">$519</span>
+              </h5>
+              <button type="submit" class="btn btn-warning my-3" name="btn-agregar">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
 
 
       <div class="text-black mt-5 p-2" style="background-color:#27b0a2;">
