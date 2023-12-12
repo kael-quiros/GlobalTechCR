@@ -21,7 +21,6 @@ session_start();
 
 <body>
   <header>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <div class="logo">
@@ -29,14 +28,17 @@ session_start();
         </div>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</a>
-
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-
+              <li>
+                <a class="dropdown-item" href="audioYVideo.php">Audio y Video</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
               <li><a class="dropdown-item" href="hogar.php">Hogar</a></li>
               <li>
                 <hr class="dropdown-divider" />
@@ -51,17 +53,15 @@ session_start();
               <li>
                 <hr class="dropdown-divider" />
               </li>
-              <li><a class="dropdown-item" href="#">Por añadir</a></li>
             </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contactenos.php">Contactenos</a>
           </li>
         </ul>
-        <a href="" class="navbar-brand"><h3 class="px-5"><i class="fas fa-shopping-basket"></i>Shopping Cart</h3></a>
-
-
-
+        <a href="shoppingCart.php" class="navbar-brand">
+          <h3 class="px-5"><i class="fas fa-shopping-basket"></i>Shopping Cart</h3>
+        </a>
         <div class="user">
           <?php
           if (isset($_SESSION['nombreUsuario'])) {
@@ -72,9 +72,90 @@ session_start();
           }
           ?>
         </div>
-
-
-      </div>
-
     </nav>
   </header>
+
+
+<div class="container-fluid">
+  <div class="row px-5  ">
+    <div class="col-md-7 bg-white ">
+      <div class="shopping-cart mt-5">
+        <h6>Mi carrito</h6>
+        <hr>
+        <form action="shoppingCart.php" method="get" class="cart-items">
+          <div class="border rounded">
+            <div class="row bg-white">
+              <div class="col-md-3 pl-0">
+                <img src="img/parlanteSony.jpg" alt="image1" class="img-fluid">
+              </div>
+              <div class="col-md-6">
+                <h5 class="pt-2">Producto1</h5>
+                <h5 class="pt-2">$599</h5>
+                <button type="submit" class="btn btn-warning">Guardar para despúes</button>
+                <button type="submit" class="btn btn-danger mx-2" name="quitar">Quitar</button>
+              </div>
+              <div class="col-md-3 py-5">
+                <div>
+                  <button type="button" class="btn bg-light border rounded-circle"><i class="fas fa-minus"></i></button>
+                  <input type="text" value="1" class="form-control w-25 d-inline">
+                  <button type="button" class="btn bg-light border rounded-circle"><i class="fas fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-4 offset-md-1 border rounded mt-5 bg-white h-25">
+      <div class="pt-4">
+        <h6>Precio detalles</h6>
+        <hr>
+        <div class="row price-details">
+          <div class="col-md-6">
+            <h6>Cantidad Items:</h6>
+            <hr>
+            <h6>Total a pagar:</h6>
+          </div>
+          <div class="col-md-6"></div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="text-black mt-5 p-2" style="background-color:#27b0a2;">
+    <footer class="footer">
+      <p>Sitio construido Global Tech CR &COPY - 2023</p>
+    </footer>
+  </div>
+
+
+
+
+
+  <script src="/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>

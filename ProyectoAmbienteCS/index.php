@@ -61,6 +61,9 @@ session_start();
             <a class="nav-link" href="contactenos.php">Contactenos</a>
           </li>
         </ul>
+        <a href="shoppingCart.php" class="navbar-brand">
+          <h3 class="px-5"><i class="fas fa-shopping-basket"></i>Shopping Cart</h3>
+        </a>
 
         <div class="user">
           <?php
@@ -161,7 +164,7 @@ session_start();
     </footer>
   </div>
 
-  </div>
+
 
 
 
