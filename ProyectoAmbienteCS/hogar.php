@@ -248,21 +248,15 @@ session_start();
             </div>
           </div>
         </form>
+        </div>
       </div>
-    </div>
-
-
-      <div class="text-black mt-5 p-2" style="background-color:#27b0a2;">
-        <footer class="footer">
-          <p>Sitio construido Global Tech CR &COPY - 2023</p>
-        </footer>
       </div>
-
-
-    </div>
+  
+    <div class="text-black mt-5 p-2" style="background-color:#27b0a2;">
+    <footer class="footer">
+      <p>Sitio construido Global Tech CR &COPY - 2023</p>
+    </footer>
   </div>
-
-
 </body>
 
 </html>

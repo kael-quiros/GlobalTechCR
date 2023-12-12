@@ -79,7 +79,7 @@ session_start();
 <div class="container-fluid">
   <div class="row px-5  ">
     <div class="col-md-7 bg-white ">
-      <div class="shopping-cart mt-5">
+      <div class="shopping-cart ">
         <h6>Mi carrito</h6>
         <hr>
         <form action="shoppingCart.php" method="get" class="cart-items">
@@ -106,7 +106,8 @@ session_start();
         </form>
       </div>
     </div>
-    <div class="col-md-4 offset-md-1 border rounded mt-5 bg-white h-25">
+    </div>
+    <div class="col-md-3 offset-md-1 border rounded mt-5 bg-white h-25">
       <div class="pt-4">
         <h6>Precio detalles</h6>
         <hr>
@@ -120,31 +121,8 @@ session_start();
         </div>  
       </div>
     </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </div>
+    </div>
 
   <div class="text-black mt-5 p-2" style="background-color:#27b0a2;">
     <footer class="footer">
@@ -158,4 +136,7 @@ session_start();
 
   <script src="/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </body>
+
+</html>

@@ -11,7 +11,6 @@
 
 <body>
   <header>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <div class="logo">
@@ -52,7 +51,6 @@
             <a class="nav-link" href="contactenos.php">Contactenos</a>
           </li>
         </ul>
-
         <div class="user">
           <?php
           if (isset($_SESSION['nombreUsuario'])) {
@@ -63,14 +61,51 @@
           }
           ?>
         </div>
-
-
       </div>
+    </div>
+  </div>
+  </nav>
+</header>
 
-    </nav>
-  </header>
+  <div class="container-form">
+    <div class="info-form">
+          <h1>Contacto</h1>
+
+          <h2>¡Bienvenido a Global Tech</h2>
+          <p>
+          En Global Tech, valoramos la comunicación directa con nuestros clientes. Si tienes 
+          preguntas, comentarios, o simplemente deseas obtener más información sobre nuestros 
+          productos o servicios, no dudes en contactarnos.
+          </p>
+          <a href="#"> <i class="fa fa-phone">
+        </i>2249-5587</a>
+        <a href="#"> <i class="fa fa-envelope"></i>
+        </i>contactanos@globaltech.com</a>
+        <a href="#"> <i class="fa fa-map-marked"></i>
+        </i>San José, Costa Rica</a>
+        </div>
+
+        <div>
+            <form action= "process_formulario.php" method="post">
+              
+              <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" class="campo"></input>
+            
+              <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico"></input>
+
+              <textarea id="mensaje" name="nombre" placeholder="Ingresa tu comentario" ></textarea>
+
+              <input type="submit" name="enviar" value="Enviar" class="btn-form">
+          </form>
+  </div>
+  </div>
+
+
+  <div class="text-black mt-5 p-2" style="background-color:#27b0a2;" >
+      <footer class="footer">
+        <p>Sitio construido Global Tech CR &COPY - 2023</p>
+      </footer>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
 </body>
-
 </html>

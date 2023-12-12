@@ -72,7 +72,7 @@ session_start();
           }
           ?>
         </div>
-
+        </div>
 
       </div>
 
@@ -83,6 +83,7 @@ session_start();
   <div class="image-container">
     <img src="img/Muebles.jpg" height="100px">
   </div>
+
 
   <div class="container">
     <div class="row text-center py-5">
@@ -249,18 +250,12 @@ session_start();
         </form>
       </div>
     </div>
-    >
-
+    </div>
     <div class="text-black mt-5 p-2" style="background-color:#27b0a2;">
       <footer class="footer">
         <p>Sitio construido Global Tech CR &COPY - 2023</p>
       </footer>
     </div>
-
-  </div>
-  </div>
-
-
 
 </body>
 
