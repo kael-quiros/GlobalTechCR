@@ -1,9 +1,21 @@
 <?php
-
-include("connection.php");
-
 session_start();
 
+if (isset($_POST['btn-agregar'])) {
+    $product_name = $_POST['btn-agregar'];
+
+    // Inicializar o obtener la variable de sesión del carrito
+    if (!isset($_SESSION['carrito'])) {
+        $_SESSION['carrito'] = [];
+    }
+
+    // Agregar el producto al carrito
+    $_SESSION['carrito'][] = $product_name;
+
+    // Redirigir de vuelta a la página de productos después de agregar al carrito
+    header("Location: audioYVideo.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +40,7 @@ session_start();
         </div>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</a>
