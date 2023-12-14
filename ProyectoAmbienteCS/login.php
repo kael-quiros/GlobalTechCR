@@ -44,7 +44,7 @@ if ($conn->connect_error) {
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="tecnologia.php">Tecnologia</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Por añadir</a></li>
+                
               </ul>
             </li>
             <li class="nav-item">
@@ -57,6 +57,8 @@ if ($conn->connect_error) {
     
 
     <div>
+
+
     <?php
 // Verificar si se pasó el parámetro "registered" en la URL
 if (isset($_GET['registered']) && $_GET['registered'] == 1) {
@@ -76,25 +78,22 @@ if (isset($_GET['registered']) && $_GET['registered'] == 1) {
             <div class="arm-down-right"></div>
         </div>
         <div class="user-box">
-            <input type="text" name="email" required>
-            <label>Email</label>
-        </div>
-        <div class="user-box">
-            <input id="password" type="password" name="password" required autocomplete="off">
-            <label>Password</label>
-        </div>
-        <button type="submit" name="action" value="login">Login</button>
-        <div id="error-message" style="display: none; color: red;"></div> 
+        <input type="text" name="email" required>
+        <label>Email</label>
+      </div>
+      <div class="user-box">
+        <input id="password" type="password" name="password" required autocomplete="off">
+        <label>Password</label>
+      </div>
+      <button type="submit" name="action" value="login">Login</button>
+      <div id="error-message" style="display: none; color: red;"></div> 
+
     </form>
-    <p style="color: white !important;" class="welcome-text"> <a href="recuperaCuenta.php">¿Olvido su contraseña?</a></p>
-    <p style="color: white !important;" class="welcome-text"> ¿No tienes una cuenta? <a href="register.php">Regístrate aquí</a></p>
+    <p style="color: white !important text-align: center;" class="welcome-text"> <a href="recuperaCuenta.php">¿Olvido su contraseña?</a></p>
+    <p style="color: white !important ;" class="welcome-text"> ¿No tienes una cuenta? <a href="register.php">Regístrate aquí</a></p>
 </div>
-
-
-
 
 <script src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-  </body>
+</body>
 </html>

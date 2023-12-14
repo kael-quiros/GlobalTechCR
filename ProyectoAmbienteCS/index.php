@@ -16,6 +16,7 @@ session_start();
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 </head>
 
@@ -61,23 +62,28 @@ session_start();
             <a class="nav-link" href="contactenos.php">Contactenos</a>
           </li>
         </ul>
+       
         <a href="shoppingCart.php" class="navbar-brand">
           <h3 class="px-5"><i class="fas fa-shopping-basket"></i>Shopping Cart</h3>
         </a>
 
         <div class="user">
-          <?php
-          if (isset($_SESSION['nombreUsuario'])) {
-            echo '<p style="color: white !important;" class="welcome-text">Bienvenido, ' . $_SESSION['nombreUsuario'] . '</p>';
-            echo '<a href="logout.php" class="logout-link">Cerrar sesión</a>';
-          } else {
-            echo '<a href="login.php" class="login-link">Iniciar sesión</a>';
-          }
-          ?>
-        </div>
+    <?php
+    if (isset($_SESSION['nombreUsuario'])) {
+        echo '<div class="user-profile">';
+        echo '<p style="color: white !important;" class="welcome-text">Bienvenido, ' . $_SESSION['nombreUsuario'] . '</p>';
+        echo '<a href="perfilUsuario.php" class="profile-link"><i class="bi bi-person"></i></a>';
+        echo '</div>';
 
+        echo '<div class="logout">';
+        echo '<a href="logout.php" class="logout-link">Cerrar sesión</a>';
+        echo '</div>';
+    } else {
+        echo '<a href="login.php" class="login-link">Iniciar sesión</a>';
+    }
+    ?>
+</div>
     </nav>
-
   </header>
 
 
@@ -206,10 +212,6 @@ session_start();
       <p>Sitio construido Global Tech CR &COPY - 2023</p>
     </footer>
   </div>
-
-
-
-
 
   <script src="/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

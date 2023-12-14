@@ -87,169 +87,57 @@ session_start();
 
   <div class="container">
     <div class="row text-center py-5">
-      <div class="col-sm-12 col-md-4 col-lg-4 my-3 my-md-0">
-        <form action="audioYVideo.php" method="post">
-          <div class="card shadow">
-            <div>
-              <img src="img/barraSonidoSony.jpg" alt="Image1" class="img-fluid card-img-top">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Producto1</h5>
-              <h6>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </h6>
-              <p class="card-text">
-                Breve descripcion del producto
-              </p>
-              <h5>
-                <small><s class="text-secondary">$599</s></small>
-                <span class="precio">$519</span>
-              </h5>
-              <button type="submit" class="btn btn-warning my-3" name="btn-agregar">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="col-sm-12 col-md-4 col-lg-4 my-3 my-md-0">
-        <form action="audioYVideo.php" method="post">
-          <div class="card shadow">
-            <div>
-              <img src="img/barraSonidoSony.jpg" alt="Image1" class="img-fluid card-img-top">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Producto2</h5>
-              <h6>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </h6>
-              <p class="card-text">
-                Breve descripcion del producto
-              </p>
-              <h5>
-                <small><s class="text-secondary">$599</s></small>
-                <span class="precio">$519</span>
-              </h5>
-              <button type="submit" class="btn btn-warning my-3" name="btn-agregar">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="col-sm-12 col-md-4 col-lg-4 my-3 my-md-0">
-        <form action="audioYVideo.php" method="post">
-          <div class="card shadow">
-            <div>
-              <img src="img/barraSonidoSony.jpg" alt="Image1" class="img-fluid card-img-top">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Producto3</h5>
-              <h6>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </h6>
-              <p class="card-text">
-                Breve descripcion del producto
-              </p>
-              <h5>
-                <small><s class="text-secondary">$599</s></small>
-                <span class="precio">$519</span>
-              </h5>
-              <button type="submit" class="btn btn-warning my-3" name="btn-agregar">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="col-sm-12 col-md-4 col-lg-4 my-3 my-md-0">
-        <form action="audioYVideo.php" method="post">
-          <div class="card shadow">
-            <div>
-              <img src="img/barraSonidoSony.jpg" alt="Image1" class="img-fluid card-img-top">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Producto4</h5>
-              <h6>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </h6>
-              <p class="card-text">
-                Breve descripcion del producto
-              </p>
-              <h5>
-                <small><s class="text-secondary">$599</s></small>
-                <span class="precio">$519</span>
-              </h5>
-              <button type="submit" class="btn btn-warning my-3" name="btn-agregar">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="col-sm-12 col-md-4 col-lg-4 my-3 my-md-0">
-        <form action="audioYVideo.php" method="post">
-          <div class="card shadow">
-            <div>
-              <img src="img/barraSonidoSony.jpg" alt="Image1" class="img-fluid card-img-top">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Producto5</h5>
-              <h6>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </h6>
-              <p class="card-text">
-                Breve descripcion del producto
-              </p>
-              <h5>
-                <small><s class="text-secondary">$599</s></small>
-                <span class="precio">$519</span>
-              </h5>
-              <button type="submit" class="btn btn-warning my-3" name="btn-agregar">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="col-sm-12 col-md-4 col-lg-4 my-3 my-md-0">
-        <form action="audioYVideo.php" method="post">
-          <div class="card shadow">
-            <div>
-              <img src="img/barraSonidoSony.jpg" alt="Image1" class="img-fluid card-img-top">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Producto6</h5>
-              <h6>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </h6>
-              <p class="card-text">
-                Breve descripcion del producto
-              </p>
-              <h5>
-                <small><s class="text-secondary">$599</s></small>
-                <span class="precio">$519</span>
-              </h5>
-              <button type="submit" class="btn btn-warning my-3" name="btn-agregar">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
-            </div>
-          </div>
-        </form>
-      </div>
+        <?php
+        include("connection.php");
+
+        // Consulta para obtener los datos de los productos de la categoría
+        $query = "SELECT product_name, product_price, product_image FROM productos WHERE id_categoria = 4"; 
+        $result = mysqli_query($connection, $query);
+
+        if ($result) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $productName = $row['product_name'];
+                $productPrice = $row['product_price'];
+                $productImage = $row['product_image'];
+        ?>
+                <div class="col-sm-12 col-md-4 col-lg-4 my-3 my-md-0">
+                    <form action="audioYVideo.php" method="post">
+                        <div class="card shadow">
+                            <div>
+                                <img src="<?php echo $productImage; ?>" alt="<?php echo $productName; ?>" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $productName; ?></h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Breve descripcion del producto
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$599</s></small>
+                                    <span class="precio">$<?php echo $productPrice; ?></span>
+                                </h5>
+                                <button type="submit" class="btn btn-warning my-3" name="btn-agregar">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+        <?php
+            }
+            mysqli_free_result($result);
+        } else {
+            echo "Error: " . mysqli_error($connection);
+        }
+
+        mysqli_close($connection);
+        ?>
     </div>
+</div>
     </div>
     <div class="text-black mt-5 p-2" style="background-color:#27b0a2;">
       <footer class="footer">
