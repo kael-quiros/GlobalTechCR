@@ -86,13 +86,13 @@
         </div>
 
         <div>
-            <form action= "process_formulario.php" method="post">
+            <form id="formComments" action= "guardar_comentario.php" method="post">
               
               <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" class="campo"></input>
             
               <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico"></input>
 
-              <textarea id="mensaje" name="nombre" placeholder="Ingresa tu comentario" ></textarea>
+              <textarea id="mensaje" name="mensaje" placeholder="Ingresa tu comentario" ></textarea>
 
               <input type="submit" name="enviar" value="Enviar" class="btn-form">
           </form>
@@ -109,3 +109,56 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+<script>
+
+/*
+//Comentarios de Contactanos
+document.addEventListener('DOMContentLoaded', function(){
+    var formulario = documento.getElementById('formComments');
+
+    formulario.addEventListener('submit', function(event){
+        event.preventDefault();
+
+        var nombre = document.getElementById('nombre').value;
+        var email = document.getElementById('email').value;
+        var mensaje = document.getElementById('mensaje').value;
+
+    var formData = new FormData();
+    formData.append('nombre', nombre); 
+    formData.append('email', email);
+    formData.append('mensaje', mensaje);
+
+
+    fetch('guardar_comentaio.php', {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => response.json())
+    .then(data =>{
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('Error: ', error)
+      })
+    })
+}) */
+
+document.addEventListener('DOMContentLoaded', function(){
+    var respuesta = {
+      "status" : "success",
+      "message" : "Comentario ha sido guardado y enviado de forma exitosa"
+
+    };
+
+    function mostraMensaje() {
+      alert(respuesta.message);
+    }
+
+    if (respuesta.status === 'success') {
+      mostrarMensaje();
+    }
+    });
+
+</script>
