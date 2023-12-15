@@ -91,7 +91,7 @@ session_start();
         include("connection.php");
 
         // Consulta para obtener los datos de los productos de la categoría 
-        $query = "SELECT product_name, product_price, product_image FROM productos WHERE id_categoria = 3"; 
+        $query = "SELECT id, product_name, product_price, product_image, product_description FROM productos WHERE id_categoria = 3";
         $result = mysqli_query($connection, $query);
 
         if ($result) {
@@ -99,10 +99,11 @@ session_start();
                 $productName = $row['product_name'];
                 $productPrice = $row['product_price'];
                 $productImage = $row['product_image'];
+                $productDescription = $row['product_description'];
         ?>
                 <div class="col-sm-12 col-md-4 col-lg-4 my-3 my-md-0">
-                    <form>
-                        <div class="card shadow">
+                    <form action="shoppingCart.php" method="post">
+                        <div>
                             <div>
                                 <img src="<?php echo $productImage; ?>" alt="<?php echo $productName; ?>" class="img-fluid card-img-top">
                             </div>
@@ -116,13 +117,17 @@ session_start();
                                     <i class="far fa-star"></i>
                                 </h6>
                                 <p class="card-text">
-                                    Breve descripcion del producto
+                                    <?php echo $productDescription; ?> <!-- Mostrar la descripción del producto -->
                                 </p>
                                 <h5>
                                     <small><s class="text-secondary">$599</s></small>
                                     <span class="precio">$<?php echo $productPrice; ?></span>
                                 </h5>
-                                <button type="submit" class="btn btn-warning my-3" name="btn-agregar">Agregar al carrito<i class="fas fa-shopping-cart"></i></button>
+                                <input type="hidden" name="page" value="hogar"> <!-- Cambia "" por el nombre de la página actual -->
+                                <input type="hidden" name="product_id" value="<?php echo $row['id']; ?>">
+                                <input type="hidden" name="product_name" value="<?php echo $row['product_name']; ?>">
+                                <input type="hidden" name="product_price" value="<?php echo $row['product_price']; ?>">
+                                <button type="submit" name="agregar_al_carrito">Agregar al carrito</button>
                             </div>
                         </div>
                     </form>
@@ -138,7 +143,7 @@ session_start();
         ?>
     </div>
 </div>
-      </div>
+
   
     <div class="text-black mt-5 p-2" style="background-color:#27b0a2;">
     <footer class="footer">

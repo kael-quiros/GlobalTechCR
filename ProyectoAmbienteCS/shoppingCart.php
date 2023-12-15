@@ -1,22 +1,36 @@
 <?php
 session_start();
 
-if (isset($_POST['btn-agregar'])) {
-    $product_name = $_POST['btn-agregar'];
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['agregar_al_carrito'])) {
+    if (isset($_POST['product_id']) && isset($_POST['product_name']) && isset($_POST['product_price'])) {
+        $product_id = $_POST['product_id'];
+        $product_name = $_POST['product_name'];
+        $product_price = $_POST['product_price'];
 
-    // Inicializar o obtener la variable de sesión del carrito
-    if (!isset($_SESSION['carrito'])) {
-        $_SESSION['carrito'] = [];
+        $product_details = [
+            'id' => $product_id,
+            'name' => $product_name,
+            'price' => $product_price
+        ];
+
+        if (!isset($_SESSION['carrito'])) {
+            $_SESSION['carrito'] = array();
+        }
+
+        $_SESSION['carrito'][] = $product_details;
+
+        if (isset($_POST['page'])) {
+            $page = $_POST['page'];
+            header("Location: $page.php");
+            exit();
+        } else {
+            header("Location: index.php");
+            exit();
+        }
     }
-
-    // Agregar el producto al carrito
-    $_SESSION['carrito'][] = $product_name;
-
-    // Redirigir de vuelta a la página de productos después de agregar al carrito
-    header("Location: audioYVideo.php");
-    exit();
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -24,7 +38,7 @@ if (isset($_POST['btn-agregar'])) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Productos del carrito</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css" />
@@ -86,55 +100,73 @@ if (isset($_POST['btn-agregar'])) {
         </div>
     </nav>
   </header>
+  
+            <?php
+            
+          // Definición de la función obtenerImagen($nombre)
+          function obtenerImagen($nombre)
+          {
+              // Implementación de la función obtenerImagen()
+              $extensiones = ['jpg', 'jpeg', 'png', 'gif']; // Agrega aquí las extensiones adicionales que puedas tener
 
+              foreach ($extensiones as $extension) {
+                  $rutaImagen = 'img/' . str_replace(' ', '', $nombre) . '.' . $extension;
+                  if (file_exists($rutaImagen)) {
+                      return $rutaImagen;
+                  }
+              }
 
-<div class="container-fluid">
-  <div class="row px-5  ">
-    <div class="col-md-7 bg-white ">
-      <div class="shopping-cart ">
-        <h6>Mi carrito</h6>
-        <hr>
-        <form action="shoppingCart.php" method="get" class="cart-items">
-          <div class="border rounded">
-            <div class="row bg-white">
-              <div class="col-md-3 pl-0">
-                <img src="img/parlanteSony.jpg" alt="image1" class="img-fluid">
+              return null; // Si no se encuentra ninguna imagen con ninguna extensión conocida
+          }
+
+          // Verificar y mostrar el carrito de compras
+          if (isset($_SESSION['carrito']) && is_array($_SESSION['carrito']) && count($_SESSION['carrito']) > 0) {
+              ?>
+              <div class="container">
+                  <div class="row text-center py-5">
+                      <div class="col-sm-12 col-md-4 col-lg-4 my-3 my-md-0">
+                          <div class="card-body">
+                              <h2>Detalles del carrito:</h2>
+                              <ul>
+                                  <?php
+                                  $total = 0.00;
+                                  foreach ($_SESSION['carrito'] as $key => $producto) {
+                                      if (is_array($producto) && isset($producto['name']) && isset($producto['price'])) {
+                                          $nombre = $producto['name'];
+                                          $precio = $producto['price'];
+                                          $total += $precio;
+
+                                          $imagen = obtenerImagen($nombre);
+                                          if ($imagen !== null) {
+                                              echo '<li>' . $nombre . ' - $' . $precio . '</li>';
+                                              echo '<img src="' . $imagen . '" width="100" height="100" />';
+                                              echo '<form>';
+                                              echo '<button class="eliminarProducto" data-producto="' . $nombre . '">Eliminar</button>';
+                                              echo '</form>';
+                                              echo '</li>';
+                                          }
+                                      }
+                                  }
+                                  ?>
+                              </ul>
+                              <h3>Total a pagar: $<?php echo number_format($total, 2); ?></h3>
+                          </div>
+                      </div>
+                  </div>
               </div>
-              <div class="col-md-6">
-                <h5 class="pt-2">Producto1</h5>
-                <h5 class="pt-2">$599</h5>
-                <button type="submit" class="btn btn-warning">Guardar para despúes</button>
-                <button type="submit" class="btn btn-danger mx-2" name="quitar">Quitar</button>
+              <?php
+          } else {
+              echo '<div class="container"><p>No hay productos en el carrito.</p></div>';
+          }
+          ?>
+                      </div>
+                  </div>
               </div>
-              <div class="col-md-3 py-5">
-                <div>
-                  <button type="button" class="btn bg-light border rounded-circle"><i class="fas fa-minus"></i></button>
-                  <input type="text" value="1" class="form-control w-25 d-inline">
-                  <button type="button" class="btn bg-light border rounded-circle"><i class="fas fa-plus"></i></button>
-                </div>
-              </div>
-            </div>
           </div>
-        </form>
-      </div>
-    </div>
-    </div>
-    <div class="col-md-3 offset-md-1 border rounded mt-5 bg-white h-25">
-      <div class="pt-4">
-        <h6>Precio detalles</h6>
-        <hr>
-        <div class="row price-details">
-          <div class="col-md-6">
-            <h6>Cantidad Items:</h6>
-            <hr>
-            <h6>Total a pagar:</h6>
-          </div>
-          <div class="col-md-6"></div>
-        </div>  
-      </div>
-    </div>
-    </div>
-    </div>
+        
+
+  
+
 
   <div class="text-black mt-5 p-2" style="background-color:#27b0a2;">
     <footer class="footer">
@@ -144,11 +176,10 @@ if (isset($_POST['btn-agregar'])) {
 
 
 
-
-
-  <script src="/js/script.js"></script>
+  <script src="js/eliminar.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>
 
 </html>
+
