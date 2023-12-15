@@ -1,7 +1,7 @@
 <?php
-
+// Se incluye el archivo de conexión
 include("connection.php");
-
+// Se inicia la sesión
 session_start();
 
 ?>
@@ -68,21 +68,25 @@ session_start();
         </a>
 
         <div class="user">
-    <?php
-    if (isset($_SESSION['nombreUsuario'])) {
-        echo '<div class="user-profile">';
-        echo '<p style="color: white !important;" class="welcome-text">Bienvenido, ' . $_SESSION['nombreUsuario'] . '</p>';
-        echo '<a href="perfilUsuario.php" class="profile-link"><i class="bi bi-person"></i></a>';
-        echo '</div>';
+          <?php
+          // Verifica si hay una sesión de usuario activa
+          if (isset($_SESSION['nombreUsuario'])) {
+              // Muestra información de bienvenida y enlace al perfil
+              echo '<div class="user-profile">';
+              echo '<p style="color: white !important;" class="welcome-text">Bienvenido, ' . $_SESSION['nombreUsuario'] . '</p>';
+              echo '<a href="perfilUsuario.php" class="profile-link"><i class="bi bi-person"></i></a>';
+              echo '</div>';
 
-        echo '<div class="logout">';
-        echo '<a href="logout.php" class="logout-link">Cerrar sesión</a>';
-        echo '</div>';
-    } else {
-        echo '<a href="login.php" class="login-link">Iniciar sesión</a>';
-    }
-    ?>
-</div>
+              // Enlace para cerrar sesión
+              echo '<div class="logout">';
+              echo '<a href="logout.php" class="logout-link">Cerrar sesión</a>';
+              echo '</div>';
+          } else {
+              // Enlace para iniciar sesión si no hay una sesión activa
+              echo '<a href="login.php" class="login-link">Iniciar sesión</a>';
+          }
+          ?>
+        </div>
     </nav>
   </header>
 

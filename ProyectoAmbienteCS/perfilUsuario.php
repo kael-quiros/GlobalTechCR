@@ -4,14 +4,17 @@ include("Usuario.php");
 
 session_start();
 
+// Verificar si no hay una sesión activa, si es así, redirigir al usuario a la página de inicio de sesión
 if (!isset($_SESSION['nombreUsuario'])) {
-    header("Location: login.php");
-    exit();
+  header("Location: login.php");
+  exit();
 }
 
+// Crear una instancia de la clase Usuario con la conexión a la base de datos
 $usuario = new Usuario($connection);
 $nombreUsuario = $_SESSION['nombreUsuario'];
 
+// datos del usuario
 $userData = $usuario->obtenerUsuarioPorNombre($nombreUsuario); 
 
 if (!$userData) {

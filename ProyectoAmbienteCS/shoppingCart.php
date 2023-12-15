@@ -1,24 +1,32 @@
 <?php
+// Inicia la sesión
 session_start();
 
+// Verifica si se envió una solicitud POST y se recibieron los datos del producto para agregar al carrito
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['agregar_al_carrito'])) {
+    // Verifica los datos del producto a agregar
     if (isset($_POST['product_id']) && isset($_POST['product_name']) && isset($_POST['product_price'])) {
+        // Obtiene los detalles del producto
         $product_id = $_POST['product_id'];
         $product_name = $_POST['product_name'];
         $product_price = $_POST['product_price'];
 
+        // Crea un arreglo con los detalles del producto
         $product_details = [
             'id' => $product_id,
             'name' => $product_name,
             'price' => $product_price
         ];
 
+        // Verifica si existe la sesión 'carrito'
         if (!isset($_SESSION['carrito'])) {
             $_SESSION['carrito'] = array();
         }
 
+        // Agrega los detalles del producto al arreglo 'carrito' 
         $_SESSION['carrito'][] = $product_details;
 
+        // Redirige a la página desde la que se envió la solicitud POST o a la página de inicio
         if (isset($_POST['page'])) {
             $page = $_POST['page'];
             header("Location: $page.php");
@@ -103,11 +111,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['agregar_al_carrito']))
   
             <?php
             
-          // Definición de la función obtenerImagen($nombre)
+          // Define de la función obtenerImagen
           function obtenerImagen($nombre)
           {
-              // Implementación de la función obtenerImagen()
-              $extensiones = ['jpg', 'jpeg', 'png', 'gif']; // Agrega aquí las extensiones adicionales que puedas tener
+              // Implementa  la función obtenerImagen
+              $extensiones = ['jpg', 'jpeg', 'png', 'gif'];
 
               foreach ($extensiones as $extension) {
                   $rutaImagen = 'img/' . str_replace(' ', '', $nombre) . '.' . $extension;
@@ -116,7 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['agregar_al_carrito']))
                   }
               }
 
-              return null; // Si no se encuentra ninguna imagen con ninguna extensión conocida
+              return null; // Si no se encuentra ninguna imagen 
           }
 
           // Verificar y mostrar el carrito de compras

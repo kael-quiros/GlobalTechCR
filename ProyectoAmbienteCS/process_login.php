@@ -1,5 +1,5 @@
 <?php
-// Incluir el archivo de conexión a la base de datos
+//  conexión a la base de datos
 include('connection.php');
 
 // Iniciar o reanudar la sesión
@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    // Consulta SQL para verificar el usuario (usando consultas preparadas para seguridad)
+    // Consulta SQL para verificar el usuario 
     $query = "SELECT * FROM usuarios WHERE email = ? AND password = ?";
     $stmt = mysqli_prepare($connection, $query);
     mysqli_stmt_bind_param($stmt, "ss", $email, $password);

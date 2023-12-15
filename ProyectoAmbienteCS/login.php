@@ -1,5 +1,5 @@
 <?php
-
+// Se incluyen los archivos de conexión a la base de datos y de procesamiento del inicio de sesión
 include("connection.php");
 include("process_login.php");
 
@@ -60,10 +60,11 @@ if ($conn->connect_error) {
 
 
     <?php
-// Verificar si se pasó el parámetro "registered" en la URL
+// Verificar si se pasó el parámetro "register" en la URL
 if (isset($_GET['registered']) && $_GET['registered'] == 1) {
-    echo '<div id="error-message" style="color: red;">Usuario ya registrado. Por favor, inicia sesión.</div>';
-}
+   // Muestra un mensaje si el usuario ya está registrado y pide iniciar sesión
+   echo '<div id="error-message" style="color: red;">Usuario ya registrado. Por favor, inicia sesión.</div>';
+  }
 ?>
 </div>
 

@@ -87,62 +87,71 @@ session_start();
 
   <div class="container">
     <div class="row text-center py-5">
-        <?php
-        include("connection.php");
+      <?php
+      // Incluye la conexión a la base de datos
+      include("connection.php");
 
-        // Consulta para obtener los datos de los productos de la categoría 
-        $query = "SELECT id, product_name, product_price, product_image, product_description FROM productos WHERE id_categoria = 4";
-        $result = mysqli_query($connection, $query);
+      // para obtener los datos de los productos de la categoría
+      $query = "SELECT id, product_name, product_price, product_image, product_description FROM productos WHERE id_categoria = 4";
+      $result = mysqli_query($connection, $query);
 
-        if ($result) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                $productName = $row['product_name'];
-                $productPrice = $row['product_price'];
-                $productImage = $row['product_image'];
-                $productDescription = $row['product_description'];
-        ?>
-                <div class="col-sm-12 col-md-4 col-lg-4 my-3 my-md-0">
-                    <form action="shoppingCart.php" method="post">
-                        <div>
-                            <div>
-                                <img src="<?php echo $productImage; ?>" alt="<?php echo $productName; ?>" class="img-fluid card-img-top">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"><?php echo $productName; ?></h5>
-                                <h6>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </h6>
-                                <p class="card-text">
-                                    <?php echo $productDescription; ?> <!-- Mostrar la descripción del producto -->
-                                </p>
-                                <h5>
-                                    <small><s class="text-secondary">$599</s></small>
-                                    <span class="precio">$<?php echo $productPrice; ?></span>
-                                </h5>
-                                <input type="hidden" name="page" value="muebles"> <!-- Cambia "" por el nombre de la página actual -->
-                                <input type="hidden" name="product_id" value="<?php echo $row['id']; ?>">
-                                <input type="hidden" name="product_name" value="<?php echo $row['product_name']; ?>">
-                                <input type="hidden" name="product_price" value="<?php echo $row['product_price']; ?>">
-                                <button type="submit" name="agregar_al_carrito">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </form>
+      if ($result) {
+        // Recorre los resultados de la consulta
+        while ($row = mysqli_fetch_assoc($result)) {
+          $productName = $row['product_name'];
+          $productPrice = $row['product_price'];
+          $productImage = $row['product_image'];
+          $productDescription = $row['product_description'];
+      ?>
+          <!-- Estructura del producto -->
+          <div class="col-sm-12 col-md-4 col-lg-4 my-3 my-md-0">
+            <form action="shoppingCart.php" method="post">
+              <div>
+                <div>
+                  <img src="<?php echo $productImage; ?>" alt="<?php echo $productName; ?>" class="img-fluid card-img-top">
                 </div>
-        <?php
-            }
-            mysqli_free_result($result);
-        } else {
-            echo "Error: " . mysqli_error($connection);
+                <div class="card-body">
+                  <h5 class="card-title"><?php echo $productName; ?></h5>
+                 
+                  <h6>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </h6>
+                  <!-- Descripción del producto -->
+                  <p class="card-text">
+                    <?php echo $productDescription; ?> <!-- Muestra la descripción del producto -->
+                  </p>
+                  <!-- Precio del producto -->
+                  <h5>
+                    <small><s class="text-secondary">$599</s></small>
+                    <span class="precio">$<?php echo $productPrice; ?></span>
+                  </h5>
+                  <!-- Campos ocultos para enviar información al carrito de compras -->
+                  <input type="hidden" name="page" value="audioYVideo">
+                  <input type="hidden" name="product_id" value="<?php echo $row['id']; ?>">
+                  <input type="hidden" name="product_name" value="<?php echo $row['product_name']; ?>">
+                  <input type="hidden" name="product_price" value="<?php echo $row['product_price']; ?>">
+                  <button type="submit" name="agregar_al_carrito">Agregar al carrito</button>
+                </div>
+              </div>
+            </form>
+          </div>
+      <?php
         }
-
-        mysqli_close($connection);
-        ?>
+        // Libera el resultado de la consulta
+        mysqli_free_result($result);
+      } else {
+        // Muestra un mensaje en caso de error en la consulta
+        echo "Error: " . mysqli_error($connection);
+      }
+      // Cierra la conexión a la base de datos
+      mysqli_close($connection);
+      ?>
     </div>
-</div>
+  </div>
 
 
 
